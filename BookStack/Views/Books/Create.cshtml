@@ -1,0 +1,53 @@
+﻿@model BookDto
+@{
+}
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <link href="/css/style.css" rel="stylesheet"/>
+        <title>Add New Book</title>
+    </head>
+    <body>
+
+    <div class="main row justify-content-center">
+        <form method="post" enctype="multipart/form-data" class="row justify-content-center mb-4" autocomplete="off">
+
+            <!-- Book Title -->
+            <div class="col-10 col-md-8 mb-3">
+                <label for="bookTitle">Book Title</label>
+                <input class="form-control" asp-for="Title" type="text" placeholder="Enter the Book Name">
+            </div>
+
+            <!-- Price -->
+            <div class="col-10 col-md-8 mb-3">
+                <label for="price">Price</label>
+                <input class="form-control" asp-for="Price" type="number" placeholder="Enter Product Price">
+            </div>
+
+            <!-- Category -->
+            <div class="col-10 col-md-8 mb-3">
+                <label for="category">Category</label>
+                <input class="form-control" asp-for="Category" type="text" placeholder="Enter Category Name">
+            </div>
+
+            <!-- Description -->
+            <div class="col-10 col-md-8 mb-3">
+                <label for="description">Description</label>
+                <input class="form-control" asp-for="Description" type="text"
+                       placeholder="Description">
+            </div>
+
+            <!-- Image -->
+            <div class="col-10 col-md-8 mb-3">
+                <label for="ImageFile">Image</label>
+                <input class="form-control" asp-for="ImageFile" type="file"
+                       placeholder="Image">
+            </div>
+
+            <!-- Submit -->
+            <div class="col-10 col-md-8">
+                <input class="btn btn-success add-btn" type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    </body>
+</html>
